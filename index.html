@@ -3,170 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adv. Shobha K | Professional Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Adv. Shobha K | Legal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* CSS TO MATCH THE SCREENSHOT VIBE */
         :root {
-            --bg: #050505;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --accent: #8b5cf6; /* The Purple Glow from your SS */
+            --bg: #000000;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.1);
+            --accent-white: #ffffff;
             --text-main: #ffffff;
-            --text-dim: #9ca3af;
+            --text-dim: #a1a1aa;
         }
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        /* Nav Bar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-            position: fixed;
-            width: 80%;
-            top: 0;
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-        }
-
-        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: white; font-weight: 800; }
-        .nav-logo img { height: 35px; border-radius: 5px; }
-
-        .nav-links a { color: var(--text-dim); text-decoration: none; margin-left: 25px; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
-
-        .btn-touch { background: var(--accent); color: white !important; padding: 8px 18px; border-radius: 8px; font-weight: 600; }
-
-        /* Hero Section */
-        header {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, #1a1033 0%, #050505 70%);
-        }
-
-        header h1 { font-size: 4rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(to right, #fff, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        header p { color: var(--text-dim); max-width: 600px; font-size: 1.2rem; }
-
-        /* Featured Work Grid */
-        .section-label { text-align: center; color: var(--accent); font-weight: 700; font-size: 2.5rem; margin-top: 100px; }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; scroll-behavior: smooth; overflow-x: hidden; }
         
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px 10%;
-        }
+        /* Navigation - White Accents */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; position: sticky; top: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); z-index: 1000; border-bottom: 1px solid var(--border); }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; font-weight: 800; font-size: 1.1rem; letter-spacing: 1px; }
+        .nav-logo img { height: 35px; border-radius: 4px; }
+        .btn-touch { background: var(--accent-white); color: black !important; padding: 10px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: 0.3s; font-size: 0.85rem; }
+        .btn-touch:hover { background: #e4e4e7; transform: scale(1.05); }
 
-        .card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 24px;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: 0.4s;
-            position: relative;
-        }
+        /* Hero - Replaced Purple with White Glow */
+        header { padding: 160px 10% 100px; text-align: center; position: relative; }
+        header::before { content: ''; position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); width: 450px; height: 450px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%); filter: blur(70px); z-index: -1; }
 
-        .card:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(139, 92, 246, 0.2); transform: translateY(-5px); }
-        .card h3 { font-size: 1.5rem; margin: 15px 0; }
-        .card p { color: var(--text-dim); font-size: 0.95rem; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin: 0; letter-spacing: -2px; line-height: 1.1; font-weight: 700; }
+        header p { color: var(--text-dim); max-width: 700px; margin: 30px auto; font-size: 1.2rem; font-weight: 300; }
 
-        /* About Section */
-        .about { display: flex; align-items: center; padding: 100px 10%; gap: 50px; }
-        .about-img { flex: 1; text-align: center; }
-        .about-img img { width: 100%; max-width: 400px; border-radius: 30px; border: 2px solid var(--accent); padding: 5px; }
-        .about-text { flex: 1.5; }
-        .about-text h2 { color: var(--accent); font-size: 2.5rem; }
-
-        /* Footer / Contact */
-        .contact-box {
-            background: var(--card-bg);
-            margin: 100px 10%;
-            padding: 80px;
-            border-radius: 30px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .contact-box h2 { font-size: 3rem; margin-bottom: 20px; }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="#" class="nav-logo">
-            <img src="logo.png" alt="Logo"> 
-            <span>AdvShobhaK</span>
-        </a>
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact" class="btn-touch">Get in Touch</a>
-        </div>
-    </nav>
-
-    <header>
-        <h1>Advocate Shobha K</h1>
-        <p>Strategic legal counsel and defense for high-stakes litigation and corporate advisory.</p>
-        <div style="margin-top: 30px;">
-            <a href="#work" class="btn-touch" style="text-decoration: none;">View Expertise</a>
-        </div>
-    </header>
-
-    <div id="work" class="section-label">Areas of Expertise</div>
-    <div class="grid">
-        <div class="card">
-            <div style="font-size: 2rem;">⚖️</div>
-            <h3>Civil Litigation</h3>
-            <p>Handling property disputes, contract law, and recovery suits with over [X] years of experience.</p>
-        </div>
-        <div class="card">
-            <div style="font-size: 2rem;">🏢</div>
-            <h3>Corporate Law</h3>
-            <p>Providing legal framework and compliance for startups and established enterprises.</p>
-        </div>
-        <div class="card">
-            <div style="font-size: 2rem;">🏠</div>
-            <h3>Property Law</h3>
-            <p>Title verification, ancestral property claims, and real estate documentation.</p>
-        </div>
-    </div>
-
-    <section id="about" class="about">
-        <div class="about-img">
-            <img src="profile.jpg" alt="Advocate Shobha K">
-        </div>
-        <div class="about-text">
-            <h2>About Shobha K</h2>
-            <p>Enter your professional bio here. For example: Advocate Shobha K is a dedicated legal professional known for [specific skill]. With a focus on [practice area], she bridges the gap between complex law and practical solutions.</p>
-            <p>As an advocate, she believes in [your philosophy, e.g., "Justice through precision"].</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-box">
-        <h2>Let's Work Together</h2>
-        <p style="color: var(--text-dim); margin-bottom: 30px;">Available for legal consulting, court representation, and advisory.</p>
-        <p style="font-size: 1.2rem; font-weight: 600;">adv.shobha@email.com</p>
-        <div style="margin-top: 30px;">
-            <a href="https://linkedin.com/in/yourusername" style="color: var(--text-dim); margin: 0 10px; text-decoration: none;">LinkedIn</a>
-            <a href="#" style="color: var(--text-dim); margin: 0 10px; text-decoration: none;">WhatsApp</a>
-        </div>
-    </section>
-
-    <footer style="text-align: center; padding: 40px; color: #444; font-size: 0.8rem;">
-        © 2026 Advocate Shobha K • Professional Legal Counsel
-    </footer>
-
-</body>
-</html>
+        /* Featured Work - White Blurry Boxes */
+        .section-label { text-align: center; color: white; font-weight: 800; font-size: 2.5rem; margin: 80px 0 40px; }
+        .grid
