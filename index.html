@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adv. Shobha K | Arbitrator & Legal Consultant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --surface: #0a0a0a;
+            --border: #222222;
+            --accent: #ffffff;
+            --text-main: #ffffff;
+            --text-dim: #9ca3af;
+        }
+
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; scroll-behavior: smooth; }
+        
+        /* Nav */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 1000; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; font-family: 'Playfair Display'; font-weight: 700; font-size: 1.2rem; }
+        .nav-logo img { height: 35px; }
+        .nav-links a { color: var(--text-dim); text-decoration: none; margin-left: 30px; font-size: 0.8rem; letter-spacing: 1px; }
+        .btn-touch { border: 1px solid white; padding: 10px 20px; transition: 0.3s; }
+        .btn-touch:hover { background: white; color: black; }
+
+        /* Hero */
+        header { padding: 120px 10% 80px; text-align: center; border-bottom: 1px solid var(--border); }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; letter-spacing: -2px; }
+        header p { color: var(--text-dim); max-width: 700px; margin: 25px auto; font-size: 1.1rem; line-height: 1.8; }
+        
+        .stats { display: flex; justify-content: center; gap: 60px; margin-top: 50px; }
+        .stat-item h2 { font-size: 2.5rem; margin: 0; color: var(--accent); }
+        .stat-item p { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Featured Work / Expertise */
+        .section-label { text-align: center; padding: 80px 0 20px; font-family: 'Playfair Display'; font-size: 2.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); border-top: 1px solid var(--border); }
+        .card { padding: 60px 40px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: 0.3s; }
+        .card:hover { background: #050505; }
+        .card h3 { font-family: 'Playfair Display'; font-size: 1.5rem; margin-bottom: 15px; }
+        .card p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.7; }
+
+        /* About Section (Color Photo) */
+        .about { display: flex; padding: 100px 10%; gap: 80px; align-items: center; border-bottom: 1px solid var(--border); }
+        .about-img { flex: 1; }
+        .about-img img { width: 100%; border: 1px solid var(--border); }
+        .about-text { flex: 1.5; }
+        .about-text h2 { font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px; }
+        .about-text p { color: var(--text-dim); font-size: 1rem; margin-bottom: 20px; }
+
+        /* Contact Box */
+        .contact-box { background: var(--surface); margin: 80px 10%; padding: 80px; border-radius: 4px; text-align: center; border: 1px solid var(--border); }
+        .contact-box h2 { font-family: 'Playfair Display'; font-size: 3rem; margin-bottom: 15px; }
+        .email-link { font-size: 1.5rem; color: white; text-decoration: none; border-bottom: 1px solid white; padding-bottom: 5px; }
+
+        footer { text-align: center; padding: 40px; color: #444; font-size: 0.7rem; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .about { flex-direction: column; text-align: center; }
+            .stats { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-logo">
+            <img src="logo.png" alt="Logo">
+            <span>ADV. SHOBHA K</span>
+        </a>
+        <div class="nav-links">
+            <a href="#about">ABOUT</a>
+            <a href="#expertise">EXPERTISE</a>
+            <a href="mailto:Shobhakhot988@gmail.com" class="btn-touch">GET IN TOUCH</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Strategic Legal Solutions.</h1>
+        <p>Specializing in Commercial Arbitration, Intellectual Property, and bespoke contractual frameworks for the global tech ecosystem.</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <h2>10+</h2>
+                <p>Certifications</p>
+            </div>
+            <div class="stat-item">
+                <h2>7+</h2>
+                <p>Publications</p>
+            </div>
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Accuracy Rate</p>
+            </div>
+        </div>
+    </header>
+
+    <div id="expertise" class="section-label">Areas of Expertise</div>
+    <div class="grid">
+        <div class="card">
+            <h3>Commercial Arbitration</h3>
+            <p>Expertise in domestic and international commercial arbitration with a focus on ADR landscape future-proofing.</p>
+        </div>
+        <div class="card">
+            <h3>Contract Architecture</h3>
+            <p>Engineering bespoke frameworks for White Label and Channel Partnership agreements to optimize revenue models.</p>
+        </div>
+        <div class="card">
+            <h3>IP & Data Privacy</h3>
+            <p>Specialized research on the intersection of AI and privacy rights, and cross-border trademark enforcement.</p>
+        </div>
+        <div class="card">
+            <h3>Corporate Governance</h3>
+            <p>Advocating for effective corporate adjudication and evaluating NCLT systemic reforms.</p>
+        </div>
+    </div>
+
+    <section id="about" class="about">
+        <div class="about-img">
+            <img src="profile.jpg" alt="Advocate Shobha K">
+        </div>
+        <div class="about-text">
+            <h2>The Practice</h2>
+            <p>Dedicated legal professional with an LLB from Dr Bhimrao Ambedkar Law University. I bridge the gap between complex legal theory and practical commercial application.</p>
+            <p>With a focus on dispute prevention and high-stakes negotiation, I ensure your intellectual and proprietary assets are fortified under multi-layered security protocols.</p>
+            <p style="font-size: 0.8rem; color: white; border-left: 2px solid white; padding-left: 15px;">
+                "Will India Become a Hub of International Arbitration?" — Published Insight, 2026
+            </p>
+        </div>
+    </section>
+
+    <section class="contact-box">
+        <h2>Let's Work Together</h2>
+        <p style="color: var(--text-dim); margin-bottom: 40px;">Available for legal consulting, arbitration, and advisory roles.</p>
+        <a href="mailto:Shobhakhot988@gmail.com" class="email-link">Shobhakhot988@gmail.com</a>
+        <div style="margin-top: 40px;">
+            <p style="font-size: 0.8rem; color: #666;">PUNE, INDIA • +91 8830230541</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 ADVOCATE SHOBHA K • ARBITRATOR & LEGAL CONSULTANT • BUILT FOR EXCELLENCE
+    </footer>
+
+</body>
+</html>
