@@ -88,27 +88,34 @@
         }
 
         .section-title { padding: 100px 10% 40px; font-family: 'Playfair Display'; font-size: 2.5rem; text-align: center; }
+        
+        /* BIG AND BOLD Title for Professional Interaction */
+        .interaction-title { 
+            padding: 100px 10% 20px; 
+            font-family: 'Playfair Display'; 
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            text-align: center; 
+            letter-spacing: -1px;
+            color: var(--text-main);
+        }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 20px 10% 80px; }
-        .card { background: var(--card-bg); padding: 50px 40px; border-radius: 30px; border: 1px solid var(--border); transition: 0.4s; }
+        .card { background: var(--card-bg); padding: 50px 40px; border-radius: 30px; border: 1px solid var(--border); transition: 0.4s; overflow: hidden; }
         .card:hover { border-color: white; transform: translateY(-5px); }
         .card h3 { font-family: 'Playfair Display'; font-size: 1.6rem; margin-bottom: 15px; }
 
         .skills-cloud { padding: 0 10% 100px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
         .skill-tag { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 8px 16px; border-radius: 100px; font-size: 0.75rem; color: var(--text-dim); }
 
-        /* UPDATED PROFESSIONAL INTERACTIONS */
-        .interactions-header { text-align: center; padding-top: 60px; }
-        .interactions-subtitle { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 40px; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        .interactions-subtitle { color: var(--text-dim); font-size: 1rem; margin-bottom: 40px; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
         
-        .testimonial-flex { display: flex; flex-direction: column; gap: 20px; }
-        .testimonial-img { 
+        .full-width-image { 
             width: 100%; 
-            border-radius: 10px; 
-            margin-top: 20px; 
+            border-radius: 15px; 
+            display: block;
             border: 1px solid var(--border);
-            opacity: 0.8;
         }
-        .verified-badge { font-size: 0.7rem; color: #10b981; border: 1px solid #10b981; padding: 1px 6px; border-radius: 10px; text-transform: uppercase; font-weight: 800; vertical-align: middle; }
 
         .about { display: flex; padding: 100px 10%; gap: 60px; border-top: 1px solid var(--border); }
         .about-img-container { flex: 0 0 350px; }
@@ -160,6 +167,7 @@
             .about-img-container { flex: 0 0 auto; width: 100%; max-width: 400px; }
             .nav-tabs { display: none; } 
             .footer-email { font-size: 1.5rem; } 
+            .interaction-title { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -210,75 +218,4 @@
 
     <div style="text-align: center; color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;">Skill Registry</div>
     <div class="skills-cloud">
-        <span class="skill-tag">Legal Research</span> <span class="skill-tag">Contract Law</span> <span class="skill-tag">Legal Agreement</span> <span class="skill-tag">Legal Drafting</span> <span class="skill-tag">Document Review</span> <span class="skill-tag">Blog Writing</span> <span class="skill-tag">Citation Style</span> <span class="skill-tag">Legal Operations</span> <span class="skill-tag">Legal Compliance</span> <span class="skill-tag">Risk Assessment</span> <span class="skill-tag">Regulatory Governance</span> <span class="skill-tag">Contract Management</span> <span class="skill-tag">Business Contracts</span> <span class="skill-tag">Contract Negotiation</span> <span class="skill-tag">Company Incorporation</span> <span class="skill-tag">Commercial Contracts</span> <span class="skill-tag">Deeds Drafting</span> <span class="skill-tag">Due Diligence</span> <span class="skill-tag">Dispute Prevention</span> <span class="skill-tag">Policy Analysis</span> <span class="skill-tag">Redlining</span> <span class="skill-tag">Data Privacy</span> <span class="skill-tag">Cross Border Transactions</span> <span class="skill-tag">Westlaw</span> <span class="skill-tag">LexisNexis</span>
-    </div>
-
-    <div class="interactions-header">
-        <div style="color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;">Professional Interactions</div>
-        <p class="interactions-subtitle">Brief reflections from professional engagements shared for informational purposes while respecting client confidentiality.</p>
-    </div>
-
-    <div class="grid">
-        <div class="card">
-            <div class="testimonial-flex">
-                <div>
-                    <h3 style="font-size: 1.1rem; margin-bottom: 5px;">Mayur T. <span class="verified-badge">✓ Verified</span></h3>
-                    <p style="color: var(--text-dim); font-size: 0.75rem; margin-bottom: 20px; text-transform: uppercase;">Founder & CEO, Wisemelon</p>
-                    <p style="font-style: italic; line-height: 1.7; color: #e5e7eb;">"Shobha was prompt, professional, and highly efficient in assisting us with drafting a service agreement. Her attention to detail and clear communication made the process smooth and stress-free."</p>
-                </div>
-                <img src="Testimonial_Image.jpeg" alt="Endorsement Verification" class="testimonial-img">
-            </div>
-        </div>
-
-        <div class="card" style="opacity: 0.5; border-style: dashed;">
-            <h3 style="font-size: 1.1rem; color: var(--text-dim);">Future Engagement</h3>
-            <p style="color: var(--text-dim);">Additional professional reflections will be added here while maintaining strict confidentiality protocols.</p>
-        </div>
-    </div>
-
-    <section id="about" class="about">
-        <div class="about-img-container">
-            <img src="profile.jpg" alt="Advocate Shobha K Profile">
-            <div class="quote-box">
-                "Committed to delivering precise, strategic legal solutions that align with organizational goals."
-            </div>
-        </div>
-        
-        <div class="about-content">
-            <div class="info-block">
-                <h4>Certifications</h4>
-                <ul class="info-list">
-                    <li>Domestic & International Commercial Arbitration</li>
-                    <li>Diploma in Advanced Contract Drafting, Negotiation and Dispute Resolution</li>
-                    <li>Corporate Litigation</li>
-                    <li>Arbitrator Training Program</li>
-                    <li>Paralegal Associate Diploma</li>
-                    <li>Diploma in Legal English Communication - oratory, writing, listening and accuracy</li>
-                </ul>
-            </div>
-
-            <div class="info-block">
-                <h4>Publications</h4>
-                <ul class="info-list">
-                    <li>National Company Law Tribunal: Challenges, Delays, and the Way Forward for Effective Corporate Adjudication in India.</li>
-                    <li>Copyright Laws Compared Across Borders</li>
-                    <li>Inside Netherlands IP Powerhouse</li>
-                    <li>India Rejects Novartis Patent Bid</li>
-                    <li>What Cannot Be Protected?</li>
-                    <li>Rewriting Intellectual Property in China</li>
-                    <li>Will India Become Hub of International Arbitration in Coming Future</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p style="color: var(--text-dim); margin-bottom: 20px; letter-spacing: 3px;">DIRECT CONSULTATION</p>
-        <a href="mailto:advshobhak@gmail.com" class="footer-email">advshobhak@gmail.com</a>
-        <div style="margin-top: 60px; color: #444; font-size: 0.8rem; letter-spacing: 3px;">
-            SHOBHA K • PUNE, INDIA • +91 8830230541
-        </div>
-    </footer>
-
-</body>
-</html>
+        <span class="skill-tag">Legal Research</span> <span class="skill-tag">Contract Law</span> <span class="skill-tag">Legal Agreement</span> <span class="skill-tag">Legal Drafting</span> <span class="skill-
