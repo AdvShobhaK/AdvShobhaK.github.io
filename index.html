@@ -12,12 +12,12 @@
             --border: rgba(255, 255, 255, 0.1);
             --text-main: #ffffff;
             --text-dim: #9ca3af;
+            --accent: #ffffff;
         }
 
         * { scroll-behavior: smooth; box-sizing: border-box; }
         body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
         
-        /* 1. NAVIGATION (Now at the very top) */
         nav { 
             display: flex; 
             justify-content: space-between; 
@@ -37,7 +37,6 @@
         .nav-tabs a:hover { color: white; }
         .btn-contact { background: white; color: black; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.8rem; }
 
-        /* 2. DISCLAIMER SECTION (Below Nav) */
         .disclaimer-hero {
             position: relative;
             width: 100%;
@@ -58,45 +57,36 @@
             z-index: 1;
         }
 
-        /* UPDATED: "White Fog Type" Disclaimer Card */
         .white-disclaimer-card {
             position: relative;
             z-index: 2;
-            /* CHANGE 1: highly transparent white background */
             background: rgba(255, 255, 255, 0.1); 
-            /* CHANGE 2: adds the "fog" or glassmorphism blur effect */
             backdrop-filter: blur(10px); 
             padding: 45px;
             border-radius: 12px;
             max-width: 850px;
             text-align: center;
             box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-            /* CHANGE 3: subtle semi-transparent white border */
             border: 1px solid rgba(255, 255, 255, 0.15); 
         }
 
-        /* UPDATED: Change header color to white for readability */
         .white-disclaimer-card h2 {
             font-family: 'Playfair Display';
             font-size: 1.8rem;
             margin-bottom: 15px;
-            /* CHANGE 4: set header text to white */
             color: #ffffff; 
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        /* UPDATED: Change paragraph color to white for readability */
         .white-disclaimer-card p {
             font-size: 0.95rem;
             line-height: 1.7;
-            /* CHANGE 5: set paragraph text to white */
             color: #ffffff; 
             margin: 0;
             font-weight: 400;
         }
 
-        /* 3. CONTENT SECTIONS */
         .section-title { padding: 100px 10% 40px; font-family: 'Playfair Display'; font-size: 2.5rem; text-align: center; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 20px 10% 80px; }
         .card { background: var(--card-bg); padding: 50px 40px; border-radius: 30px; border: 1px solid var(--border); transition: 0.4s; }
@@ -106,14 +96,58 @@
         .skills-cloud { padding: 0 10% 100px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
         .skill-tag { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 8px 16px; border-radius: 100px; font-size: 0.75rem; color: var(--text-dim); }
 
-        .about { display: flex; padding: 100px 10%; gap: 60px; align-items: center; border-top: 1px solid var(--border); }
-        .about-img img { width: 100%; max-width: 400px; border-radius: 20px; border: 1px solid var(--border); }
-        .about-text { flex: 1; }
+        /* RESTRUCTURED ABOUT SECTION */
+        .about { display: flex; padding: 100px 10%; gap: 60px; border-top: 1px solid var(--border); }
+        .about-img-container { flex: 0 0 350px; }
+        .about-img-container img { width: 100%; border-radius: 20px; border: 1px solid var(--border); margin-bottom: 25px; }
+        
+        .about-content { flex: 1; }
+        .about-content h2 { font-family: 'Playfair Display'; font-size: 2.5rem; margin-top: 0; margin-bottom: 30px; }
+
+        .info-block { margin-bottom: 40px; }
+        .info-block h4 { 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            color: var(--text-dim); 
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+        .info-list { list-style: none; padding: 0; margin: 0; }
+        .info-list li { 
+            font-size: 0.95rem; 
+            line-height: 1.6; 
+            margin-bottom: 8px; 
+            padding-left: 15px; 
+            position: relative; 
+            color: #e5e7eb;
+        }
+        .info-list li::before { 
+            content: "•"; 
+            position: absolute; 
+            left: 0; 
+            color: var(--text-dim); 
+        }
+
+        .quote-box { 
+            color: var(--text-dim); 
+            border-left: 2px solid white; 
+            padding-left: 20px; 
+            margin-top: 40px; 
+            font-style: italic;
+            font-size: 1.1rem;
+        }
 
         footer { text-align: center; padding: 80px 10%; border-top: 1px solid var(--border); }
         .footer-email { font-family: 'Playfair Display'; font-size: 2.5rem; color: white; text-decoration: none; border-bottom: 2px solid white; }
 
-        @media (max-width: 900px) { .nav-tabs { display: none; } .about { flex-direction: column; text-align: center; } .footer-email { font-size: 1.5rem; } }
+        @media (max-width: 1024px) { 
+            .about { flex-direction: column; align-items: center; text-align: left; }
+            .about-img-container { flex: 0 0 auto; width: 100%; max-width: 400px; }
+            .nav-tabs { display: none; } 
+            .footer-email { font-size: 1.5rem; } 
+        }
     </style>
 </head>
 <body>
@@ -167,14 +201,40 @@
     </div>
 
     <section id="about" class="about">
-        <div class="about-img">
+        <div class="about-img-container">
             <img src="profile.jpg" alt="Advocate Shobha K Profile">
+            <div class="quote-box">
+                "Committed to delivering precise, strategic legal solutions that align with organizational goals."
+            </div>
         </div>
-        <div class="about-text">
-            <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">The Practice</h2>
-            <p><strong>LLB:</strong> Dr Bhimrao Ambedkar Law University, Jaipur (2021-2024)</p>
-            <p><strong>BA-Honours (Sociology):</strong> Savitribai Phule Pune University (2016-2019)</p>
-            <p style="color: var(--text-dim); border-left: 2px solid white; padding-left: 20px; margin-top: 20px; font-style: italic;">"Committed to delivering precise, strategic legal solutions that align with organizational goals."</p>
+        
+        <div class="about-content">
+            <h2>The Practice</h2>
+            
+            <div class="info-block">
+                <h4>Certifications</h4>
+                <ul class="info-list">
+                    <li>Domestic & International Commercial Arbitration</li>
+                    <li>Diploma in Advanced Contract Drafting, Negotiation and Dispute Resolution</li>
+                    <li>Corporate Litigation</li>
+                    <li>Arbitrator Training Program</li>
+                    <li>Paralegal Associate Diploma</li>
+                    <li>Diploma in Legal English Communication - oratory, writing, listening and accuracy</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h4>Publications</h4>
+                <ul class="info-list">
+                    <li>National Company Law Tribunal: Challenges, Delays, and the Way Forward for Effective Corporate Adjudication in India.</li>
+                    <li>Copyright Laws Compared Across Borders</li>
+                    <li>Inside Netherlands IP Powerhouse</li>
+                    <li>India Rejects Novartis Patent Bid</li>
+                    <li>What Cannot Be Protected?</li>
+                    <li>Rewriting Intellectual Property in China</li>
+                    <li>Will India Become Hub of International Arbitration in Coming Future</li>
+                </ul>
+            </div>
         </div>
     </section>
 
