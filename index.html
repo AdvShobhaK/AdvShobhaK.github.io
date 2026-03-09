@@ -18,15 +18,15 @@
         * { scroll-behavior: smooth; box-sizing: border-box; }
         body { background-color: var(--bg); color: var(--text-main); font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
         
-        /* Disclaimer Section */
+        /* Disclaimer Section (Now serving as the Top Section) */
         .disclaimer-section {
             position: relative;
             width: 100%;
-            min-height: 400px;
+            min-height: 60vh; /* Increased height for top section impact */
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 60px 10%;
+            padding: 80px 10%;
             background: url('Emerging_Legal_Specializations.jpeg') no-repeat center center;
             background-size: cover;
             border-bottom: 1px solid var(--border);
@@ -35,36 +35,37 @@
         .disclaimer-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* Darkens the image for text readability */
+            background: rgba(0, 0, 0, 0.4); /* Subtle overlay to keep image visible */
             z-index: 1;
         }
 
         .disclaimer-content {
             position: relative;
             z-index: 2;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(255, 255, 255, 0.9); /* Light background for black text */
             backdrop-filter: blur(10px);
-            padding: 40px;
+            padding: 50px;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
             max-width: 900px;
             text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
         .disclaimer-content h2 {
             font-family: 'Playfair Display';
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #000000; /* Black Header */
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .disclaimer-content p {
-            font-size: 0.85rem;
-            line-height: 1.6;
-            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #000000; /* Black Body Text */
             margin: 0;
+            font-weight: 400;
         }
 
         /* Navigation */
@@ -77,12 +78,6 @@
         .nav-tabs a:hover { color: white; }
 
         .btn-contact { background: white; color: black; padding: 10px 22px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; }
-
-        /* Hero */
-        header { padding: 160px 10% 80px; text-align: center; position: relative; }
-        header::before { content: ''; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 500px; background: radial-gradient(circle, var(--white-glow) 0%, transparent 70%); filter: blur(80px); z-index: -1; }
-        header h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin: 0; letter-spacing: -2px; }
-        header p { color: var(--text-dim); max-width: 750px; margin: 30px auto; font-size: 1.2rem; line-height: 1.7; }
 
         /* Skills */
         .section-title { padding: 80px 10% 40px; font-family: 'Playfair Display'; font-size: 2.5rem; text-align: center; }
@@ -104,12 +99,12 @@
         footer { text-align: center; padding: 120px 10%; border-top: 1px solid var(--border); }
         .footer-email { font-family: 'Playfair Display'; font-size: 3rem; color: white; text-decoration: none; border-bottom: 2px solid white; transition: 0.3s; }
 
-        @media (max-width: 900px) { .nav-tabs { display: none; } .about { flex-direction: column; text-align: center; } header h1 { font-size: 3rem; } .footer-email { font-size: 1.6rem; } }
+        @media (max-width: 900px) { .nav-tabs { display: none; } .about { flex-direction: column; text-align: center; } .footer-email { font-size: 1.6rem; } }
     </style>
 </head>
 <body>
 
-    <div class="disclaimer-section">
+    <div class="disclaimer-section" id="home">
         <div class="disclaimer-overlay"></div>
         <div class="disclaimer-content">
             <h2>Disclaimer</h2>
@@ -131,12 +126,6 @@
         </div>
         <a href="mailto:advshobhak@gmail.com" class="btn-contact">GET IN TOUCH</a>
     </nav>
-
-    <header id="home">
-        <p style="text-transform: uppercase; letter-spacing: 5px; font-size: 0.75rem; color: #fff; margin-bottom: 20px; font-weight: 600;">Arbitrator • Consultant • Advocate</p>
-        <h1>Strategic Advocacy.</h1>
-        <p>Architecting high-precision legal solutions in Commercial Arbitration, Contract Drafting, and Corporate Litigation. Focused on delivering strategic results for the modern commercial landscape.</p>
-    </header>
 
     <div id="skills" class="section-title">Core Expertise</div>
     <div class="grid">
